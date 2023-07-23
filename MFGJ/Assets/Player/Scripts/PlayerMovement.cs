@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float speedBiasX = 10f;
     [SerializeField]
-    private float speedY = 2f, speedX = 5f, speedBiasX = 10f;
+    private float speedY = 2f, speedX = 5f;
 
     Rigidbody2D rb2d;
 
