@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Debuff
   - SpeedBoost
+  - Upsize
+  - Rehydrate
+  - OilSpill
+  - Boom
+  - Invincibility
+  - Downsize
+  - Racer
   layers:
   - Default
   - TransparentFX
