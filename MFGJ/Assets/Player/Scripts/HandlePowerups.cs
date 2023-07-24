@@ -6,8 +6,12 @@ using System.Linq;
 
 public class HandlePowerups : MonoBehaviour
 {
+    public GameObject[] oilSpillPrefabs = new GameObject[4];
+    public GameObject exhaustPoint;
+
     PlayerMovement movement;
     PlayerHealth health;
+    GameObject powerup;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,7 @@ public class HandlePowerups : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col) 
     {
+        powerup = col.gameObject;
         string colTag = col.gameObject.tag;
 
         if (colTag == "SpeedBoost") StartCoroutine(ChangeSpeed(1.5f));
@@ -34,8 +39,6 @@ public class HandlePowerups : MonoBehaviour
         else if (colTag == "Invincibility") StartCoroutine(MakeInvincible());
         else if (colTag == "Boom") ExplodeNearestRacer();
         else if (colTag == "Rehydrate") Rehydrate();
-
-        Destroy(col.gameObject);
     }
 
     void ExplodeNearestRacer()
@@ -54,6 +57,7 @@ public class HandlePowerups : MonoBehaviour
         }
 
         if (nearestRacer != null) Destroy(nearestRacer);
+        Destroy(powerup);
     }
 
     void Rehydrate()
@@ -61,15 +65,27 @@ public class HandlePowerups : MonoBehaviour
         health.hydration += 15;
 
         if (health.hydration > 50) health.hydration = 50;
+        Destroy(powerup);
+    }
+
+    void SpawnOilSpill()
+    {
+        int i = UnityEngine.Random.Range(0, 3);
+
+        Instantiate(oilSpillPrefabs[i], exhaustPoint.transform.position, Quaternion.identity);
     }
 
     IEnumerator SpillOil()
     {
-        yield return new WaitForSeconds(10f);
+        Destroy(powerup);
+        InvokeRepeating("SpawnOilSpill", 0f, 0.2f);
+        yield return new WaitForSeconds(5f);
+        CancelInvoke();
     }
 
     IEnumerator ChangeSize(float resizeFactor) // TODO: Create size up animation
     {
+        Destroy(powerup);
         transform.localScale *= resizeFactor;
         yield return new WaitForSeconds(5f);
         transform.localScale /= resizeFactor;
@@ -77,6 +93,7 @@ public class HandlePowerups : MonoBehaviour
 
     IEnumerator ChangeSpeed(float speedFactor) // TODO: Add tailwind effect
     {
+        Destroy(powerup);
         movement.speedBiasX *= speedFactor;
         yield return new WaitForSeconds(3f);
         movement.speedBiasX /= speedFactor;
@@ -84,6 +101,7 @@ public class HandlePowerups : MonoBehaviour
 
     IEnumerator MakeInvincible()
     {
+        Destroy(powerup);
         health.damageable = false;
         yield return new WaitForSeconds(10f);
         health.damageable = true;
