@@ -19,7 +19,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log(rb2d.velocity);
+        }
     }
 
     private void FixedUpdate()

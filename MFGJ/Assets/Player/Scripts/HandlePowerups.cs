@@ -20,8 +20,9 @@ public class HandlePowerups : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.gameObject.name == "Speed Boost")
+        if (other.gameObject.name == "SpeedBoost")
         {
+            Debug.Log("Speeding Up!");
             StartCoroutine(ChangeSpeed(1.2f));
         }
         else if (other.gameObject.name == "Mega")
@@ -38,6 +39,7 @@ public class HandlePowerups : MonoBehaviour
         }
         else if (other.gameObject.name == "Debuff")
         {
+            Debug.Log("Slowing Down!");
             StartCoroutine(ChangeSpeed(0.8f));
         }
     }
