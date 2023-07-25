@@ -19,11 +19,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log($"Speed Bias: {speedBiasX}");
+        }
     }
 
     private void FixedUpdate()
     {
         rb2d.velocity = new Vector2(speedX * Input.GetAxisRaw("Horizontal") + speedBiasX, speedY * Input.GetAxisRaw("Vertical"));
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Dirt") 
+        {
+            speedBiasX *= 2f;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Dirt")
+        {
+            speedBiasX *= 2f;
+        }
     }
 }

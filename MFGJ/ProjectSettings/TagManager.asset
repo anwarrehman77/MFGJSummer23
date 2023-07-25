@@ -14,6 +14,7 @@ TagManager:
   - Downsize
   - Racer
   - Oil
+  - Dirt
   layers:
   - Default
   - TransparentFX
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 1808180185
     locked: 0
   - name: Player
     uniqueID: 1544271027
