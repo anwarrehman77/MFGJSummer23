@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speedBiasX = 10f;
+    public float speedBiasX = 3f;
     [SerializeField]
     private float speedY = 2f, speedX = 5f;
 
@@ -19,10 +19,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log($"Speed Bias: {speedBiasX}");
-        }
+        if (Input.GetKeyDown(KeyCode.Return)) Debug.Log($"Speed Bias: {speedBiasX}, Speed X: {speedX}, Speed Y: {speedY}");
+        
     }
 
     private void FixedUpdate()
@@ -32,17 +30,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Dirt") 
+        if (col.gameObject.tag == "Pathway")
         {
-            speedBiasX *= 2f;
+            speedBiasX *= 1.2f;
+            speedX *= 1.2f;
         }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Dirt")
+        if (col.gameObject.tag == "Pathway")
         {
-            speedBiasX *= 2f;
+            speedBiasX /= 1.2f;
+            speedX /= 1.2f;
         }
     }
 }
