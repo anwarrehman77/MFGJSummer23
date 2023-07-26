@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330785332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.586777, y: -32.195248, z: -10}
+  m_LocalPosition: {x: -30.586775, y: -67.195244, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3582,7 +3582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006999853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.586777, y: -32.195248, z: -10}
+  m_LocalPosition: {x: -30.586775, y: -67.195244, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5439,7 +5439,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!19719996 &1045848351
 TilemapCollider2D:
@@ -7282,7 +7282,7 @@ GameObject:
   - component: {fileID: 1261138477}
   m_Layer: 0
   m_Name: Ramps
-  m_TagString: Untagged
+  m_TagString: Ramps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7341,20 +7341,44 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1261138479}
     m_ColliderPaths:
-    - - X: -430000000
-        Y: -320000000
-      - X: -440000000
-        Y: -320000000
-      - X: -440000000
-        Y: -330000000
-      - X: -430000000
-        Y: -330000000
+    - - X: -240000000
+        Y: -670000000
+      - X: -250000000
+        Y: -670000000
+      - X: -250000000
+        Y: -680000000
+      - X: -240000000
+        Y: -680000000
+    - - X: -220000000
+        Y: -670000000
+      - X: -230000000
+        Y: -670000000
+      - X: -230000000
+        Y: -680000000
+      - X: -220000000
+        Y: -680000000
+    - - X: -200000000
+        Y: -670000000
+      - X: -210000000
+        Y: -670000000
+      - X: -210000000
+        Y: -680000000
+      - X: -200000000
+        Y: -680000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -43.00003, y: -33}
-      - {x: -43.00003, y: -32}
-      - {x: -44, y: -32.00003}
-      - {x: -43.999973, y: -33}
+    - - {x: -20.000029, y: -68}
+      - {x: -20.000029, y: -67}
+      - {x: -21, y: -67.00003}
+      - {x: -20.999971, y: -68}
+    - - {x: -22.000029, y: -68}
+      - {x: -22.000029, y: -67}
+      - {x: -23, y: -67.00003}
+      - {x: -22.999971, y: -68}
+    - - {x: -24.000029, y: -68}
+      - {x: -24.000029, y: -67}
+      - {x: -25, y: -67.00003}
+      - {x: -24.999971, y: -68}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -7480,7 +7504,27 @@ Tilemap:
   m_GameObject: {fileID: 1261138475}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -44, y: -33, z: 0}
+  - first: {x: -25, y: -68, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 9
+      m_TileSpriteIndex: 13
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 5
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -23, y: -68, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 9
+      m_TileSpriteIndex: 13
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 5
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -21, y: -68, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 9
@@ -7510,7 +7554,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 06be46fd916fd644abfe2bed933037d3, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -7539,10 +7583,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
+  - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: 68aaec9deae143b44b09ac4bc3b6d55c, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1
+  - m_RefCount: 3
     m_Data:
       e00: 1
       e01: 0
@@ -7571,13 +7615,13 @@ Tilemap:
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 1
+  - m_RefCount: 3
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -49, y: -33, z: 0}
-  m_Size: {x: 49, y: 33, z: 1}
+  m_Origin: {x: -49, y: -68, z: 0}
+  m_Size: {x: 49, y: 68, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -7867,7 +7911,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &1425027304
 Animator:
@@ -7950,7 +7994,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425027299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.5, y: -32, z: 0}
+  m_LocalPosition: {x: -30.5, y: -67, z: 0}
   m_LocalScale: {x: 5, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

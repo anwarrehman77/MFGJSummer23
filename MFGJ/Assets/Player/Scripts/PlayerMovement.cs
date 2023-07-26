@@ -20,10 +20,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return)) Debug.Log($"Speed Bias: {speedBiasX}, Speed X: {speedX}, Speed Y: {speedY}");
-        
     }
 
     private void FixedUpdate()
+    {
+        Move();
+    }
+    
+    void Move()
     {
         rb2d.velocity = new Vector2(speedX * Input.GetAxisRaw("Horizontal") + speedBiasX, speedY * Input.GetAxisRaw("Vertical"));
     }
