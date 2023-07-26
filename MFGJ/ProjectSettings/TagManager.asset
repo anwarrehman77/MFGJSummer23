@@ -15,6 +15,7 @@ TagManager:
   - Racer
   - Oil
   - Pathway
+  - Ramps
   layers:
   - Default
   - TransparentFX

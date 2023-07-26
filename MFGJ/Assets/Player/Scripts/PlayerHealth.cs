@@ -26,6 +26,8 @@ public class PlayerHealth : MonoBehaviour
     {
         hydrationMeter.value = hydration;
         healthBar.value = health;
+
+        if (health == 0 || hydration == 0) Die();
     }
 
     void Dehydrate()
@@ -36,5 +38,10 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (damageable) health -= damage;
+    }
+
+    void Die()
+    {
+        Debug.Log("Dead monkey");
     }
 }
