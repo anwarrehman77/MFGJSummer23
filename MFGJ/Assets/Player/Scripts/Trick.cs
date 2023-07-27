@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class Trick : MonoBehaviour
 {
+    public int rotations = 0;
+    
     private Rigidbody2D rb2d;
     
     private bool rotate = false;
+    private bool shouldCount = false;
+    private float rotationEpsilon = 60f;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        this.enabled = false;       
+        this.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)) Debug.Log(transform.eulerAngles.z);
+        if ((transform.eulerAngles.z >= 360 - rotationEpsilon) && shouldCount)
+        {
+            rotations++;
+            shouldCount = false;
+        }
+        else if ((transform.eulerAngles.z <= rotationEpsilon))
+        {
+            shouldCount = true;
+        }
 
         rotate = Input.GetKey(KeyCode.Space);
     }

@@ -25,11 +25,6 @@ public class DetectRamps : MonoBehaviour
         playerHealth = GetComponent<PlayerHealth>();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return)) Debug.Log(transform.rotation.eulerAngles.z);
-    }
-
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Ramps")
@@ -61,6 +56,7 @@ public class DetectRamps : MonoBehaviour
         yield return new WaitUntil(() => transform.position.y <= targetYPos);
         
         rb2d.gravityScale = 0f;
+        playerTrick.rotations = 0;
 
         playerMovement.enabled = true;
         playerTrick.enabled = false;
