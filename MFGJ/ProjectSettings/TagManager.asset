@@ -59,6 +59,9 @@ TagManager:
   - name: Ground
     uniqueID: 1808180185
     locked: 0
+  - name: Powerups
+    uniqueID: 105695221
+    locked: 0
   - name: Player
     uniqueID: 1544271027
     locked: 0

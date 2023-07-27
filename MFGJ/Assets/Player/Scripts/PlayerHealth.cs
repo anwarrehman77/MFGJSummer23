@@ -42,6 +42,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Dead monkey");
+        Destroy(gameObject);
+        Time.timeScale = 0f;
     }
 }
