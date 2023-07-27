@@ -40,9 +40,10 @@ public class PlayerHealth : MonoBehaviour
         if (damageable) health -= damage;
     }
 
-    void Die()
+    public void Die()
     {
-        Destroy(gameObject);
-        Time.timeScale = 0f;
+        Debug.Log("Dead Monkey");
+        // Destroy(gameObject);
+        // Time.timeScale = 0f;
     }
 }

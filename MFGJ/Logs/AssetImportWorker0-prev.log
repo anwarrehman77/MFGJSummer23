@@ -15,7 +15,7 @@ C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58149
+65036
 Successfully changed project path to: C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ
 C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [18704] Host "[IP] 192.168.33.2 [Port] 0 [Flags] 2 [Guid] 4139172272 [EditorId] 4139172272 [Version] 1048832 [Id] WindowsEditor(7,ANWAR-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [3724] Host "[IP] 192.168.33.2 [Port] 0 [Flags] 2 [Guid] 2657207229 [EditorId] 2657207229 [Version] 1048832 [Id] WindowsEditor(7,ANWAR-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [18704] Host "[IP] 192.168.33.2 [Port] 0 [Flags] 2 [Guid] 4139172272 [EditorId] 4139172272 [Version] 1048832 [Id] WindowsEditor(7,ANWAR-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [3724] Host "[IP] 192.168.33.2 [Port] 0 [Flags] 2 [Guid] 2657207229 [EditorId] 2657207229 [Version] 1048832 [Id] WindowsEditor(7,ANWAR-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 18.87 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 14.76 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.4f1 (35713cd46cd7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -69,46 +69,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56696
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.011903 seconds.
-- Loaded All Assemblies, in  0.451 seconds
+Registered in 0.012234 seconds.
+- Loaded All Assemblies, in  0.428 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.366 seconds
-Domain Reload Profiling: 814ms
-	BeginReloadAssembly (111ms)
+- Finished resetting the current domain, in  0.329 seconds
+Domain Reload Profiling: 754ms
+	BeginReloadAssembly (103ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (48ms)
+	RebuildCommonClasses (45ms)
 	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (84ms)
-	LoadAllAssembliesAndSetupDomain (188ms)
-		LoadAssemblies (108ms)
+	initialDomainReloadingComplete (78ms)
+	LoadAllAssembliesAndSetupDomain (183ms)
+		LoadAssemblies (100ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (179ms)
-			TypeCache.Refresh (178ms)
-				TypeCache.ScanAssembly (165ms)
+		AnalyzeDomain (174ms)
+			TypeCache.Refresh (173ms)
+				TypeCache.ScanAssembly (160ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (367ms)
+	FinalizeReload (329ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (292ms)
+		SetupLoadedEditorAssemblies (259ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (199ms)
-			ProcessInitializeOnLoadMethodAttributes (67ms)
+			ProcessInitializeOnLoadAttributes (171ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,52 +118,52 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\anwar\Documents\GitHub\MFGJSummer23\MFGJ\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\anwar\Documents\GitHub\MFGJSummer23\MFGJ\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.330 seconds
-Refreshing native plugins compatible for Editor in 9.06 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.915 seconds
+Refreshing native plugins compatible for Editor in 6.47 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.042 seconds
-Domain Reload Profiling: 2365ms
-	BeginReloadAssembly (182ms)
+- Finished resetting the current domain, in  0.765 seconds
+Domain Reload Profiling: 1675ms
+	BeginReloadAssembly (157ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (24ms)
-	RebuildCommonClasses (58ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (79ms)
-	LoadAllAssembliesAndSetupDomain (989ms)
-		LoadAssemblies (494ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (623ms)
+		LoadAssemblies (366ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (580ms)
-			TypeCache.Refresh (531ms)
-				TypeCache.ScanAssembly (510ms)
-			ScanForSourceGeneratedMonoScriptInfo (38ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1043ms)
+		AnalyzeDomain (332ms)
+			TypeCache.Refresh (300ms)
+				TypeCache.ScanAssembly (287ms)
+			ScanForSourceGeneratedMonoScriptInfo (26ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (766ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (719ms)
+		SetupLoadedEditorAssemblies (567ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (134ms)
-			ProcessInitializeOnLoadAttributes (487ms)
-			ProcessInitializeOnLoadMethodAttributes (70ms)
-			AfterProcessingInitializeOnLoad (13ms)
+			BeforeProcessingInitializeOnLoad (97ms)
+			ProcessInitializeOnLoadAttributes (385ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (12ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 9.53 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 8.86 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4299 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 94 unused Assets / (1.5 MB). Loaded Objects now: 4745.
-Memory consumption went from 156.3 MB to 154.8 MB.
-Total: 7.426800 ms (FindLiveObjects: 0.566100 ms CreateObjectMapping: 0.312100 ms MarkObjects: 5.626800 ms  DeleteObjects: 0.920400 ms)
+Memory consumption went from 156.2 MB to 154.7 MB.
+Total: 4.684900 ms (FindLiveObjects: 0.370600 ms CreateObjectMapping: 0.120500 ms MarkObjects: 3.707000 ms  DeleteObjects: 0.485500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -179,106 +179,82 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 859386.390782 seconds.
-  path: Assets/Player/Sprites/Bikers/Brown/BrownBiker1.png
-  artifactKey: Guid(f0188b75280158444ae9af8aaf36edc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Brown/BrownBiker1.png using Guid(f0188b75280158444ae9af8aaf36edc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f6bd9b6a957f6f621af735e2f27f91') in 0.126345 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Player/Sprites/Bikers
-  artifactKey: Guid(929a81532127b3749aa0463fedfb02cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers using Guid(929a81532127b3749aa0463fedfb02cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b8bd729e4e9bda6ad28369cf6890c2') in 0.000531 seconds
+  Time since last request: 5322.774509 seconds.
+  path: Assets/Environment/Sprites/Tile Assets
+  artifactKey: Guid(af59b460e22497344bd2824bacb847cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Tile Assets using Guid(af59b460e22497344bd2824bacb847cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '659a6a444e29660af5aaa0f6fefb2ec1') in 0.002307 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000070 seconds.
-  path: Assets/Player/Sprites/Bikers/Brown/BrownBiker2.png
-  artifactKey: Guid(f448fbce1acf01e47a7cd273d2e8944a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Brown/BrownBiker2.png using Guid(f448fbce1acf01e47a7cd273d2e8944a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b9cb0ef949b943692d1cbaba3e4ee2f') in 0.019029 seconds
+  Time since last request: 0.000028 seconds.
+  path: Assets/Environment/Sprites/Tile Assets/Triangle.asset
+  artifactKey: Guid(06be46fd916fd644abfe2bed933037d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Tile Assets/Triangle.asset using Guid(06be46fd916fd644abfe2bed933037d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a972a23315b6642ddbe9b6ecc1a4962') in 0.030821 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 540.782726 seconds.
+  path: Assets/Environment/Sprites/Road.png
+  artifactKey: Guid(c90b6c0ef5952fd4e88d554d5b597109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Road.png using Guid(c90b6c0ef5952fd4e88d554d5b597109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab135696eeac5a67ffcbe8db5dc467bb') in 0.086586 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 23.912441 seconds.
-  path: Assets/Player/Sprites/Bikers/Blue/Biker2.png
-  artifactKey: Guid(f288e07a30f4214408a468e6485f7cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Blue/Biker2.png using Guid(f288e07a30f4214408a468e6485f7cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '457fa45eec9f6e39fab532d2c69de5ac') in 0.021906 seconds
+  Time since last request: 10.741431 seconds.
+  path: Assets/Environment/Sprites/Road.png
+  artifactKey: Guid(c90b6c0ef5952fd4e88d554d5b597109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Road.png using Guid(c90b6c0ef5952fd4e88d554d5b597109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb28b31e3439fbb74bc59e4b3f300717') in 0.014919 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 15.977782 seconds.
-  path: Assets/Player/Sprites/Bikers/Brown/BrownBiker2.png
-  artifactKey: Guid(f448fbce1acf01e47a7cd273d2e8944a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Brown/BrownBiker2.png using Guid(f448fbce1acf01e47a7cd273d2e8944a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '303f01e0efc1888ba6f08b2962864bef') in 0.020303 seconds
+  Time since last request: 5.755154 seconds.
+  path: Assets/Environment/Sprites/Road.png
+  artifactKey: Guid(c90b6c0ef5952fd4e88d554d5b597109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Road.png using Guid(c90b6c0ef5952fd4e88d554d5b597109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab6041129e622e867355138b58f4fce6') in 0.013516 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 18.608397 seconds.
+  path: Assets/Environment/Sprites/Road.png
+  artifactKey: Guid(c90b6c0ef5952fd4e88d554d5b597109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Road.png using Guid(c90b6c0ef5952fd4e88d554d5b597109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c00c8babbce32f87c329462ed149da') in 0.024222 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 159.950877 seconds.
+  path: Assets/Environment/Sprites/Tile Assets/Road_0.asset
+  artifactKey: Guid(67b969fe1ae8bde4faf7f69b1f93538f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Tile Assets/Road_0.asset using Guid(67b969fe1ae8bde4faf7f69b1f93538f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb7ee16c197cbbd26f02a5aa2a181ba') in 0.020117 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 4.663073 seconds.
-  path: Assets/Player/Sprites/Bikers/Green/GreenBiker2.png
-  artifactKey: Guid(4946de2b9e4a0d248a191b0cc8f163ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Green/GreenBiker2.png using Guid(4946de2b9e4a0d248a191b0cc8f163ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bac08c93ec25d2e8618f0281f5b28d3') in 0.017996 seconds
+  Time since last request: 0.000026 seconds.
+  path: Assets/Environment/Sprites/Tile Assets/Road_4.asset
+  artifactKey: Guid(05987eb8bada2db43b97d132b83b391c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Tile Assets/Road_4.asset using Guid(05987eb8bada2db43b97d132b83b391c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bfb5b3490f8f0171446401e034539c5') in 0.016824 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 9.879623 seconds.
-  path: Assets/Player/Sprites/Bikers/Green/GreenBiker2.png
-  artifactKey: Guid(4946de2b9e4a0d248a191b0cc8f163ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Green/GreenBiker2.png using Guid(4946de2b9e4a0d248a191b0cc8f163ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a486e86872d2cdd7c5bb85c806c673fa') in 0.017102 seconds
+  Time since last request: 0.000021 seconds.
+  path: Assets/Environment/Sprites/Tile Assets/Road_2.asset
+  artifactKey: Guid(5a010b446dc4d7f49b426de6afcf7997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Tile Assets/Road_2.asset using Guid(5a010b446dc4d7f49b426de6afcf7997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bdfe032ea97bb9d21da28cf17f4d6ff') in 0.017966 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 3.395754 seconds.
-  path: Assets/Player/Sprites/Bikers/Purple/PurpleBiker2.png
-  artifactKey: Guid(3e74bc733484f3448a46e84f8b6a6547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Purple/PurpleBiker2.png using Guid(3e74bc733484f3448a46e84f8b6a6547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4cd79445e1f8219def659545d376cf3') in 0.024611 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 9.426106 seconds.
-  path: Assets/Player/Sprites/Bikers/Purple/PurpleBiker2.png
-  artifactKey: Guid(3e74bc733484f3448a46e84f8b6a6547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Purple/PurpleBiker2.png using Guid(3e74bc733484f3448a46e84f8b6a6547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '573531d2bbbfea07272df4bbb19041bc') in 0.018560 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 7.811669 seconds.
-  path: Assets/Player/Sprites/Bikers/Red/RedBiker2.png
-  artifactKey: Guid(c483d99e8470eca45a37b96a8dee617b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Red/RedBiker2.png using Guid(c483d99e8470eca45a37b96a8dee617b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1161909dd13ba4d46faa7f4aba49674e') in 0.021666 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 14.098467 seconds.
-  path: Assets/Player/Sprites/Bikers/Red/RedBiker2.png
-  artifactKey: Guid(c483d99e8470eca45a37b96a8dee617b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Red/RedBiker2.png using Guid(c483d99e8470eca45a37b96a8dee617b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285ea895dd22ae0963fb9c459387e311') in 0.018651 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 2.037688 seconds.
-  path: Assets/Player/Sprites/Bikers/Yellow/YellowBiker2.png
-  artifactKey: Guid(6cd9022069b8bbe4a8b5ef034448351b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Yellow/YellowBiker2.png using Guid(6cd9022069b8bbe4a8b5ef034448351b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17c30611eb25fca8a84b411d11e72534') in 0.021981 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 7.615383 seconds.
-  path: Assets/Player/Sprites/Bikers/Yellow/YellowBiker2.png
-  artifactKey: Guid(6cd9022069b8bbe4a8b5ef034448351b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Player/Sprites/Bikers/Yellow/YellowBiker2.png using Guid(6cd9022069b8bbe4a8b5ef034448351b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '544227c508ff6cc014558d6baae83c70') in 0.024525 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Environment/Sprites/Tile Assets/Road_3.asset
+  artifactKey: Guid(b9c5ae331d029bb489880cc5b2631c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/Sprites/Tile Assets/Road_3.asset using Guid(b9c5ae331d029bb489880cc5b2631c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf8ff8487f7b26ab70b24c054b8b929f') in 0.015474 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
