@@ -72,7 +72,7 @@ public class DetectRamps : MonoBehaviour
         StartCoroutine(ChangeFOV(cam, 60f, 0.3f));
         cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
 
-        gameManagerObject.GetComponent<GameManager>().AddScore(playerTrick.rotations * 100);
+        StartCoroutine(gameManagerObject.GetComponent<GameManager>().SetScoreText(playerTrick.rotations * 100, 0.5f));
         
         rb2d.gravityScale = 0f;
         playerTrick.rotations = 0;
@@ -87,12 +87,13 @@ public class DetectRamps : MonoBehaviour
     IEnumerator ChangeFOV(CinemachineVirtualCamera cam, float endFOV, float duration)
     {
         float startFOV = cam.m_Lens.FieldOfView;
-        float time = 0;
-        while(time < duration)
+        float timeElapsed = 0;
+
+        while(timeElapsed < duration)
         {
-            cam.m_Lens.FieldOfView = Mathf.Lerp(startFOV, endFOV, time / duration);
+            cam.m_Lens.FieldOfView = Mathf.Lerp(startFOV, endFOV, timeElapsed / duration);
             yield return null;
-            time += Time.deltaTime;
+            timeElapsed += Time.deltaTime;
         }
     }
 }

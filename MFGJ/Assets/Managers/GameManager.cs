@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerPrefs.SetString("LastAccessedLevel", level);
     }
 
     // Update is called once per frame
@@ -30,15 +30,24 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void AddScore(int scoreUp)
-    {
-        score += scoreUp;
-    }
-
     public void OnStageEnd()
     {
         score += Mathf.RoundToInt(timeLimit);
         PlayerPrefs.SetInt($"LastScore{level}", score);
         if (score > PlayerPrefs.GetInt($"HighScore{level}")) PlayerPrefs.SetInt($"HighScore{level}", score);
+    }
+
+    public IEnumerator SetScoreText(int scoreUp, float duration)
+    {
+        int scoreTmp = score;
+        int targetScore = score + scoreUp;
+        float timeElapsed = 0;
+        
+        while (timeElapsed <= duration)
+        {
+            score = Mathf.RoundToInt(Mathf.Lerp(scoreTmp, targetScore, timeElapsed / duration));
+            yield return null;
+            timeElapsed += Time.deltaTime;
+        }
     }
 }
