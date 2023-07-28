@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speedBiasX = 3f;
+
+    [SerializeField]
+    GameObject gameManager;
     [SerializeField]
     private float speedY = 2f, speedX = 5f;
 
@@ -28,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
             speedBiasX *= 1.2f;
             speedX *= 1.2f;
         }
+        else if (col.gameObject.tag == "FinishLine") gameManager.GetComponent<GameManager>().OnStageEnd();
     }
 
     private void OnTriggerExit2D(Collider2D col)

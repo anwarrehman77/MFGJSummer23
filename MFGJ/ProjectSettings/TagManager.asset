@@ -16,6 +16,7 @@ TagManager:
   - Oil
   - Pathway
   - Ramps
+  - FinishLine
   layers:
   - Default
   - TransparentFX
