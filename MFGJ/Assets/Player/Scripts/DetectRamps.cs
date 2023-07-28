@@ -9,13 +9,15 @@ public class DetectRamps : MonoBehaviour
     public float launchForce = 50f;
 
     [SerializeField]
+    GameObject gameManagerObject;
+    [SerializeField]
     CinemachineVirtualCamera cam;
 
-    Rigidbody2D rb2d;
-    PlayerMovement playerMovement;
-    Trick playerTrick;
-    BoxCollider2D wheelsCollider;
-    PlayerHealth playerHealth;
+    private Rigidbody2D rb2d;
+    private PlayerMovement playerMovement;
+    private Trick playerTrick;
+    private BoxCollider2D wheelsCollider;
+    private PlayerHealth playerHealth;
 
     float targetYPos;
 
@@ -27,6 +29,11 @@ public class DetectRamps : MonoBehaviour
         playerTrick = GetComponent<Trick>();
         wheelsCollider = GetComponent<BoxCollider2D>();
         playerHealth = GetComponent<PlayerHealth>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return)) gameManagerObject.GetComponent<GameManager>().OnStageEnd();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -64,6 +71,8 @@ public class DetectRamps : MonoBehaviour
 
         StartCoroutine(ChangeFOV(cam, 60f, 0.3f));
         cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
+
+        gameManagerObject.GetComponent<GameManager>().AddScore(playerTrick.rotations * 100);
         
         rb2d.gravityScale = 0f;
         playerTrick.rotations = 0;
