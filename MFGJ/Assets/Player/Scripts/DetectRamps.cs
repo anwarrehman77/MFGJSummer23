@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class DetectRamps : MonoBehaviour
 {
     // Variables
     public float launchForce = 50f;
+
+    [SerializeField]
+    CinemachineVirtualCamera cam;
 
     Rigidbody2D rb2d;
     PlayerMovement playerMovement;
@@ -52,8 +56,14 @@ public class DetectRamps : MonoBehaviour
         
         rb2d.AddForce(new Vector2(1f, 1f) * launchForce, ForceMode2D.Impulse);
 
+        StartCoroutine(ChangeFOV(cam, 30f, 0.3f));
+        cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 2;
+
         yield return new WaitForSeconds(0.02f);
         yield return new WaitUntil(() => transform.position.y <= targetYPos);
+
+        StartCoroutine(ChangeFOV(cam, 60f, 0.3f));
+        cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
         
         rb2d.gravityScale = 0f;
         playerTrick.rotations = 0;
@@ -63,5 +73,17 @@ public class DetectRamps : MonoBehaviour
         wheelsCollider.enabled = true;
 
         CheckRot();
+    }
+
+    IEnumerator ChangeFOV(CinemachineVirtualCamera cam, float endFOV, float duration)
+    {
+        float startFOV = cam.m_Lens.FieldOfView;
+        float time = 0;
+        while(time < duration)
+        {
+            cam.m_Lens.FieldOfView = Mathf.Lerp(startFOV, endFOV, time / duration);
+            yield return null;
+            time += Time.deltaTime;
+        }
     }
 }
