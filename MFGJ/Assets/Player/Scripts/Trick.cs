@@ -7,7 +7,9 @@ public class Trick : MonoBehaviour
     public int rotations = 0;
     
     private Rigidbody2D rb2d;
-    
+
+    [SerializeField]
+    private float rotateSpeed = 18f;
     private bool rotate = false;
     private bool shouldCount = false;
     private float rotationEpsilon = 60f;
@@ -37,6 +39,6 @@ public class Trick : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rotate) transform.Rotate(0f, 0f, 12f, Space.Self);
+        if (rotate) transform.Rotate(0f, 0f, rotateSpeed, Space.Self);
     }
 }
