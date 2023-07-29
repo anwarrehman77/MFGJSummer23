@@ -39,6 +39,11 @@ public class HandlePowerups : MonoBehaviour
         else if (colTag == "Invincibility") StartCoroutine(MakeInvincible());
         else if (colTag == "Boom") ExplodeNearestRacer();
         else if (colTag == "Rehydrate") Rehydrate();
+        else if (colTag == "Candy")
+        {
+            health.hydration /= 4;
+            StartCoroutine(ChangeSpeed(5f));
+        }
     }
 
     void ExplodeNearestRacer()

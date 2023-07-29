@@ -17,6 +17,7 @@ TagManager:
   - Pathway
   - Ramps
   - FinishLine
+  - Candy
   layers:
   - Default
   - TransparentFX
