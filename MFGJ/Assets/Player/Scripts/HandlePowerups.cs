@@ -39,14 +39,11 @@ public class HandlePowerups : MonoBehaviour
         else if (colTag == "Invincibility") StartCoroutine(MakeInvincible());
         else if (colTag == "Boom") ExplodeNearestRacer();
         else if (colTag == "Rehydrate") Rehydrate();
+        else if (colTag == "Flower") StartCoroutine(StunRacers());
         else if (colTag == "Candy")
         {
             health.hydration /= 4;
             StartCoroutine(ChangeSpeed(5f));
-        }
-        else if (colTag == "Math")
-        {
-            
         }
     }
 
@@ -67,6 +64,42 @@ public class HandlePowerups : MonoBehaviour
 
         if (nearestRacer != null) Destroy(nearestRacer);
         Destroy(powerup);
+    }
+
+    IEnumerator StunRacers()
+    {
+        Debug.Log("Hi");
+        GameObject[] racers = GameObject.FindGameObjectsWithTag("Racer");
+        List<GameObject> racersList = racers.ToList();
+        List<GameObject> nearestRacers = new List<GameObject>();
+
+        for (int i = 0; i < 3; i++)
+        {
+            float minDistance = float.MaxValue;
+            GameObject nearestRacer = null;
+
+            foreach (GameObject racer in racersList)
+            {
+                float distance = Vector2.Distance(transform.position, racer.transform.position);
+                
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    nearestRacer = racer;
+                }
+            }
+
+            if (nearestRacer != null) 
+            {
+                nearestRacers.Add(nearestRacer);
+                racersList.Remove(nearestRacer);
+            }
+        }
+
+        foreach (GameObject racer in nearestRacers) racer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        Destroy(powerup);
+        yield return new WaitForSeconds(3f);
+        foreach (GameObject racer in nearestRacers) racer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 
     void Rehydrate()
