@@ -21,6 +21,7 @@ TagManager:
   - Correct
   - Flower
   - Bee
+  - EggBasket
   layers:
   - Default
   - TransparentFX

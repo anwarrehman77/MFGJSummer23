@@ -34,7 +34,42 @@ public class HandlePowerups : MonoBehaviour
         else if (colTag == "Boom") ExplodeNearestRacer();
         else if (colTag == "Rehydrate") Rehydrate();
         else if (colTag == "Flower") StartCoroutine(StunRacers());
-        else if (col.gameObject.tag == "Bee")
+        else if (colTag == "EggBasket") 
+        {
+            int powerups =UnityEngine.Random.Range(0, 8);
+
+            switch (powerups)
+            {
+                case 0:
+                StartCoroutine(ChangeSpeed(1.5f));
+                break;
+                case 1: 
+                StartCoroutine(ChangeSpeed(0.5f));
+                break;
+                case 2:
+                StartCoroutine(ChangeSize(2f));
+                break;
+                case 3:
+                StartCoroutine(ChangeSize(0.5f));
+                break;
+                case 4:
+                StartCoroutine(SpillOil());
+                break;
+                case 5:
+                StartCoroutine(MakeInvincible());
+                break;
+                case 6:
+                ExplodeNearestRacer();
+                break;
+                case 7:
+                Rehydrate();
+                break;
+                case 8:
+                StartCoroutine(StunRacers());
+                break;
+            }
+        }
+        else if (colTag == "Bee")
         {
             StartCoroutine(ChangeSpeed(2.5f));
         }
