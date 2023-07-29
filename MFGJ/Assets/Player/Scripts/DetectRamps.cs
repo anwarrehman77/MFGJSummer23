@@ -5,7 +5,6 @@ using Cinemachine;
 
 public class DetectRamps : MonoBehaviour
 {
-    // Variables
     public float launchForce = 50f;
     public int scoreMultiplier = 1;
 
@@ -20,9 +19,8 @@ public class DetectRamps : MonoBehaviour
     private BoxCollider2D wheelsCollider;
     private PlayerHealth playerHealth;
 
-    float targetYPos;
+    private float targetYPos;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -43,6 +41,11 @@ public class DetectRamps : MonoBehaviour
         {
             StartCoroutine(TakeOff());
         }
+
+        if (col.gameObject.tag == "Correct")
+        {
+            StartCoroutine(ScoreBoost(2, 5f));
+        }
     }
 
     void CheckRot()
@@ -53,7 +56,9 @@ public class DetectRamps : MonoBehaviour
 
     IEnumerator TakeOff()
     {
-        rb2d.velocity = new Vector2(0f, 0f); // Can delete this line to conserve current momentum
+        float takeOffTime = Time.time;
+
+        rb2d.velocity = Vector2.zero; // Can delete this line to conserve current momentum
         targetYPos = transform.position.y;
         
         playerMovement.enabled = false;
@@ -67,8 +72,7 @@ public class DetectRamps : MonoBehaviour
         StartCoroutine(ChangeFOV(cam, 30f, 0.3f));
         cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 2;
 
-        yield return new WaitForSeconds(0.02f);
-        yield return new WaitUntil(() => transform.position.y <= targetYPos);
+        yield return new WaitUntil(() => (transform.position.y <= targetYPos) && (Time.time > takeOffTime + 0.02f));
 
         StartCoroutine(ChangeFOV(cam, 60f, 0.3f));
         cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
@@ -96,5 +100,12 @@ public class DetectRamps : MonoBehaviour
             yield return null;
             timeElapsed += Time.deltaTime;
         }
+    }
+
+    IEnumerator ScoreBoost(int multiplyFactor, float duration)
+    {
+        scoreMultiplier *= multiplyFactor;
+        yield return new WaitForSeconds(duration);
+        scoreMultiplier /= multiplyFactor;
     }
 }

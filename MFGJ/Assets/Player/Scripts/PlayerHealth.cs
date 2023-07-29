@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
         hydrationMeter.value = hydration;
         healthBar.value = health;
 
-        if (health == 0 || hydration == 0) Die();
+        if (health <= 0 || hydration <= 0) Die();
     }
 
     void Dehydrate()
@@ -42,8 +42,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Dead Monkey");
-        // Destroy(gameObject);
-        // Time.timeScale = 0f;
+        Destroy(gameObject);
+        Time.timeScale = 0f;
     }
 }
