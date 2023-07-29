@@ -9,21 +9,15 @@ public class HandlePowerups : MonoBehaviour
     public GameObject[] oilSpillPrefabs = new GameObject[4];
     public GameObject exhaustPoint;
 
-    PlayerMovement movement;
-    PlayerHealth health;
-    GameObject powerup;
+    private PlayerMovement movement;
+    private PlayerHealth health;
+    private GameObject powerup;
+    private GameObject colObject;
 
-    // Start is called before the first frame update
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
         health = GetComponent<PlayerHealth>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D col) 
@@ -40,6 +34,10 @@ public class HandlePowerups : MonoBehaviour
         else if (colTag == "Boom") ExplodeNearestRacer();
         else if (colTag == "Rehydrate") Rehydrate();
         else if (colTag == "Flower") StartCoroutine(StunRacers());
+        else if (col.gameObject.tag == "Bee")
+        {
+            StartCoroutine(ChangeSpeed(2.5f));
+        }
         else if (colTag == "Candy")
         {
             health.hydration /= 4;
@@ -68,7 +66,6 @@ public class HandlePowerups : MonoBehaviour
 
     IEnumerator StunRacers()
     {
-        Debug.Log("Hi");
         GameObject[] racers = GameObject.FindGameObjectsWithTag("Racer");
         List<GameObject> racersList = racers.ToList();
         List<GameObject> nearestRacers = new List<GameObject>();
