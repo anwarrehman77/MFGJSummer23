@@ -44,6 +44,10 @@ public class HandlePowerups : MonoBehaviour
             health.hydration /= 4;
             StartCoroutine(ChangeSpeed(5f));
         }
+        else if (colTag == "Math")
+        {
+            
+        }
     }
 
     void ExplodeNearestRacer()

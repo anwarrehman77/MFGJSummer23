@@ -18,6 +18,7 @@ TagManager:
   - Ramps
   - FinishLine
   - Candy
+  - Math
   layers:
   - Default
   - TransparentFX

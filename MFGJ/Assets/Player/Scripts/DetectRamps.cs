@@ -7,6 +7,7 @@ public class DetectRamps : MonoBehaviour
 {
     // Variables
     public float launchForce = 50f;
+    public int scoreMultiplier = 1;
 
     [SerializeField]
     GameObject gameManagerObject;
@@ -72,7 +73,7 @@ public class DetectRamps : MonoBehaviour
         StartCoroutine(ChangeFOV(cam, 60f, 0.3f));
         cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
 
-        StartCoroutine(gameManagerObject.GetComponent<GameManager>().SetScoreText(playerTrick.rotations * 100, 0.5f));
+        StartCoroutine(gameManagerObject.GetComponent<GameManager>().SetScoreText(playerTrick.rotations * 100 * scoreMultiplier, 0.5f));
         
         rb2d.gravityScale = 0f;
         playerTrick.rotations = 0;
