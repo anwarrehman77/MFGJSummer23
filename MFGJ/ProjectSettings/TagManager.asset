@@ -19,6 +19,7 @@ TagManager:
   - FinishLine
   - Candy
   - Correct
+  - IceCube
   layers:
   - Default
   - TransparentFX

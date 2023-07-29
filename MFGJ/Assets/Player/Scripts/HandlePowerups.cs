@@ -8,16 +8,18 @@ public class HandlePowerups : MonoBehaviour
 {
     public GameObject[] oilSpillPrefabs = new GameObject[4];
     public GameObject exhaustPoint;
-
+    private Rigidbody2D rb2d;
     PlayerMovement movement;
     PlayerHealth health;
     GameObject powerup;
+  
 
     // Start is called before the first frame update
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
         health = GetComponent<PlayerHealth>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class HandlePowerups : MonoBehaviour
         else if (colTag == "Invincibility") StartCoroutine(MakeInvincible());
         else if (colTag == "Boom") ExplodeNearestRacer();
         else if (colTag == "Rehydrate") Rehydrate();
+        else if (colTag == "IceCube") StartCoroutine(FreezePlayer());
         else if (colTag == "Candy")
         {
             health.hydration /= 4;
@@ -114,5 +117,14 @@ public class HandlePowerups : MonoBehaviour
         health.damageable = false;
         yield return new WaitForSeconds(10f);
         health.damageable = true;
+    }
+
+    IEnumerator FreezePlayer()
+    {
+        movement.enabled = false;
+        rb2d.velocity = Vector2.zero;
+        yield return new WaitForSeconds(3f);
+        movement.enabled = true;
+        Destroy(powerup);
     }
 }
