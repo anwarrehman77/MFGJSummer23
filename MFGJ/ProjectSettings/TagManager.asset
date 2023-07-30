@@ -22,6 +22,8 @@ TagManager:
   - Flower
   - Bee
   - EggBasket
+  - Meteor
+  - Lava
   layers:
   - Default
   - TransparentFX
