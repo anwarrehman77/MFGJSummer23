@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
     GameObject explosionParticles;
+    [SerializeField]
+    private int dehydrationRate = 1;
 
     public Slider hydrationMeter;
     public Slider healthBar;
@@ -35,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Dehydrate()
     {
-        hydration--;
+        hydration -= dehydrationRate;
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -45,6 +47,14 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(25);
             Instantiate(explosionParticles, col.gameObject.transform.position, Quaternion.identity);
             Destroy(col.gameObject);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Lava")
+        {
+           health -= 2;
         }
     }
 
