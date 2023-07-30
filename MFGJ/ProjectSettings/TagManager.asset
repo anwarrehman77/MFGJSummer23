@@ -19,6 +19,9 @@ TagManager:
   - FinishLine
   - Candy
   - Correct
+  - Flower
+  - Bee
+  - EggBasket
   layers:
   - Default
   - TransparentFX
@@ -64,6 +67,9 @@ TagManager:
     locked: 0
   - name: Powerups
     uniqueID: 105695221
+    locked: 0
+  - name: Entities
+    uniqueID: 2269002645
     locked: 0
   - name: Player
     uniqueID: 1544271027

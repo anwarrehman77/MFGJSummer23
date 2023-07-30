@@ -9,21 +9,15 @@ public class HandlePowerups : MonoBehaviour
     public GameObject[] oilSpillPrefabs = new GameObject[4];
     public GameObject exhaustPoint;
 
-    PlayerMovement movement;
-    PlayerHealth health;
-    GameObject powerup;
+    private PlayerMovement movement;
+    private PlayerHealth health;
+    private GameObject powerup;
+    private GameObject colObject;
 
-    // Start is called before the first frame update
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
         health = GetComponent<PlayerHealth>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D col) 
@@ -39,14 +33,50 @@ public class HandlePowerups : MonoBehaviour
         else if (colTag == "Invincibility") StartCoroutine(MakeInvincible());
         else if (colTag == "Boom") ExplodeNearestRacer();
         else if (colTag == "Rehydrate") Rehydrate();
+        else if (colTag == "Flower") StartCoroutine(StunRacers());
+        else if (colTag == "EggBasket") 
+        {
+            int powerups =UnityEngine.Random.Range(0, 8);
+
+            switch (powerups)
+            {
+                case 0:
+                StartCoroutine(ChangeSpeed(1.5f));
+                break;
+                case 1: 
+                StartCoroutine(ChangeSpeed(0.5f));
+                break;
+                case 2:
+                StartCoroutine(ChangeSize(2f));
+                break;
+                case 3:
+                StartCoroutine(ChangeSize(0.5f));
+                break;
+                case 4:
+                StartCoroutine(SpillOil());
+                break;
+                case 5:
+                StartCoroutine(MakeInvincible());
+                break;
+                case 6:
+                ExplodeNearestRacer();
+                break;
+                case 7:
+                Rehydrate();
+                break;
+                case 8:
+                StartCoroutine(StunRacers());
+                break;
+            }
+        }
+        else if (colTag == "Bee")
+        {
+            StartCoroutine(ChangeSpeed(2.5f));
+        }
         else if (colTag == "Candy")
         {
             health.hydration /= 4;
             StartCoroutine(ChangeSpeed(5f));
-        }
-        else if (colTag == "Math")
-        {
-            
         }
     }
 
@@ -67,6 +97,41 @@ public class HandlePowerups : MonoBehaviour
 
         if (nearestRacer != null) Destroy(nearestRacer);
         Destroy(powerup);
+    }
+
+    IEnumerator StunRacers()
+    {
+        GameObject[] racers = GameObject.FindGameObjectsWithTag("Racer");
+        List<GameObject> racersList = racers.ToList();
+        List<GameObject> nearestRacers = new List<GameObject>();
+
+        for (int i = 0; i < 3; i++)
+        {
+            float minDistance = float.MaxValue;
+            GameObject nearestRacer = null;
+
+            foreach (GameObject racer in racersList)
+            {
+                float distance = Vector2.Distance(transform.position, racer.transform.position);
+                
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    nearestRacer = racer;
+                }
+            }
+
+            if (nearestRacer != null) 
+            {
+                nearestRacers.Add(nearestRacer);
+                racersList.Remove(nearestRacer);
+            }
+        }
+
+        foreach (GameObject racer in nearestRacers) racer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        Destroy(powerup);
+        yield return new WaitForSeconds(3f);
+        foreach (GameObject racer in nearestRacers) racer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 
     void Rehydrate()
