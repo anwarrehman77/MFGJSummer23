@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField]
+    GameObject explosionParticles;
+
     public Slider hydrationMeter;
     public Slider healthBar;
     public int hydration = 50;
@@ -33,6 +36,16 @@ public class PlayerHealth : MonoBehaviour
     void Dehydrate()
     {
         hydration--;
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Meteor")
+        {
+            TakeDamage(25);
+            Instantiate(explosionParticles, col.gameObject.transform.position, Quaternion.identity);
+            Destroy(col.gameObject);
+        }
     }
 
     public void TakeDamage(int damage)
