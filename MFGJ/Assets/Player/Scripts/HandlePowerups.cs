@@ -6,16 +6,16 @@ using System.Linq;
 
 public class HandlePowerups : MonoBehaviour
 {
-    public GameObject snowballPrefab;
+    [SerializeField]
+    private GameObject[] oilSpillPrefabs = new GameObject[4];
+    [SerializeField]
+    private GameObject exhaustPoint, snowballPrefab, inkParticles;
     private bool hasSnowball = false;
-    public GameObject[] oilSpillPrefabs = new GameObject[4];
-    public GameObject exhaustPoint;
+    private PlayerMovement movement;
     private Rigidbody2D rb2d;
-    PlayerMovement movement;
-    PlayerHealth health;
-    GameObject powerup;
+    private PlayerHealth health;
+    private GameObject powerup;
   
-
     // Start is called before the first frame update
     void Start()
     {
@@ -37,38 +37,55 @@ public class HandlePowerups : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col) 
     {
         powerup = col.gameObject;
-        string colTag = col.gameObject.tag;
 
-        if (colTag == "SpeedBoost") StartCoroutine(ChangeSpeed(1.5f));
-        else if (colTag == "Debuff") StartCoroutine(ChangeSpeed(0.5f));
-        else if (colTag == "Upsize") StartCoroutine(ChangeSize(2f));
-        else if (colTag == "Downsize") StartCoroutine(ChangeSize(0.5f));
-        else if (colTag == "OilSpill") StartCoroutine(SpillOil());
-        else if (colTag == "Invincibility") StartCoroutine(MakeInvincible());
-        else if (colTag == "Boom") ExplodeNearestRacer();
-        else if (colTag == "Rehydrate") Rehydrate();
-        else if (colTag == "IceCube") StartCoroutine(FreezePlayer());
-        else if (colTag == "Present")
+        switch (col.gameObject.tag)
         {
-            int type = UnityEngine.Random.Range(0, 1);
-            switch(type)
+            case "SpeedBoost":
+            StartCoroutine(ChangeSpeed(1.5f));
+            break;
+            case "Debuff":
+            StartCoroutine(ChangeSpeed(0.5f));
+            break;
+            case "Upsize":
+            StartCoroutine(ChangeSize(2f));
+            break;
+            case "Downsize":
+            StartCoroutine(ChangeSize(0.5f));
+            break;
+            case "OilSpill":
+            StartCoroutine(SpillOil());
+            break;
+            case "Invincibility":
+            StartCoroutine(MakeInvincible());
+            break;
+            case "Boom":
+            ExplodeNearestRacer();
+            break;
+            case "Rehydrate":
+            Rehydrate();
+            break;
+            case "IceCube":
+            StartCoroutine(FreezePlayer());
+            break;
+            case "Present":
+            int presentType = UnityEngine.Random.Range(0, 2);
+
+            switch(presentType)
             {
                 case 0:
                 hasSnowball = true;
+                Destroy(powerup);
                 break;
                 case 1:
-                Debug.Log("BLOOP");
+                Instantiate(inkParticles, transform.position, Quaternion.identity);
+                Destroy(powerup);
                 break;
             }
-        }
-        else if (colTag == "Candy")
-        {
+            break;
+            case "Candy":
             health.hydration /= 4;
             StartCoroutine(ChangeSpeed(5f));
-        }
-        else if (colTag == "Math")
-        {
-            
+            break;
         }
     }
 
@@ -161,9 +178,12 @@ public class HandlePowerups : MonoBehaviour
                 nearestRacer = racer;
             }
         }
+
         Vector2 targetDirection = ((Vector2)nearestRacer.transform.position - (Vector2)exhaustPoint.transform.position).normalized;
-        GameObject newSnowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
+        
+        GameObject newSnowball = Instantiate(snowballPrefab, exhaustPoint.transform.position, Quaternion.identity);
+
         Rigidbody2D snowballrb = newSnowball.GetComponent<Rigidbody2D>();
-        snowballrb.velocity = targetDirection * 20f;
+        snowballrb.velocity = targetDirection * 13f;
     }
 }

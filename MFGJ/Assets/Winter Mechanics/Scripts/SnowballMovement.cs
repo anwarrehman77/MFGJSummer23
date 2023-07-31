@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class SnowballMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float lifetime = 10;
+    private float timeSinceInstantiated = 0f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        timeSinceInstantiated += Time.deltaTime;
+
+        if (timeSinceInstantiated >= lifetime) Destroy(gameObject);
     }
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Racer")

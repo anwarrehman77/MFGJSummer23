@@ -30,6 +30,15 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0 || hydration <= 0) Die();
     }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Icicle")
+        {
+            TakeDamage(10);
+            Destroy(col.gameObject);
+        }
+    }
+
     void Dehydrate()
     {
         hydration--;
