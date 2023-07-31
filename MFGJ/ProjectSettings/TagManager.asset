@@ -24,6 +24,9 @@ TagManager:
   - EggBasket
   - Meteor
   - Lava
+  - IceCube
+  - Icicle
+  - Present
   layers:
   - Default
   - TransparentFX
@@ -67,6 +70,9 @@ TagManager:
   - name: Ground
     uniqueID: 1808180185
     locked: 0
+  - name: Environment
+    uniqueID: 2307337915
+    locked: 0
   - name: Powerups
     uniqueID: 105695221
     locked: 0
@@ -75,4 +81,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1544271027
+    locked: 0
+  - name: Foreground
+    uniqueID: 959005187
     locked: 0

@@ -6,38 +6,91 @@ using System.Linq;
 
 public class HandlePowerups : MonoBehaviour
 {
-    public GameObject[] oilSpillPrefabs = new GameObject[4];
-    public GameObject exhaustPoint;
-
+    [SerializeField]
+    private GameObject[] oilSpillPrefabs = new GameObject[4];
+    [SerializeField]
+    private GameObject exhaustPoint, snowballPrefab, inkParticles;
+    private GameObject powerup;
     private PlayerMovement movement;
     private PlayerHealth health;
-    private GameObject powerup;
-    private GameObject colObject;
+    private Rigidbody2D rb2d;
+    private bool hasSnowball = false;
 
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
         health = GetComponent<PlayerHealth>();
+        rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T) && hasSnowball)
+        {
+            LaunchSnowball();
+            hasSnowball = !hasSnowball;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col) 
     {
         powerup = col.gameObject;
-        string colTag = col.gameObject.tag;
-
-        if (colTag == "SpeedBoost") StartCoroutine(ChangeSpeed(1.5f));
-        else if (colTag == "Debuff") StartCoroutine(ChangeSpeed(0.5f));
-        else if (colTag == "Upsize") StartCoroutine(ChangeSize(2f));
-        else if (colTag == "Downsize") StartCoroutine(ChangeSize(0.5f));
-        else if (colTag == "OilSpill") StartCoroutine(SpillOil());
-        else if (colTag == "Invincibility") StartCoroutine(MakeInvincible());
-        else if (colTag == "Boom") ExplodeNearestRacer();
-        else if (colTag == "Rehydrate") Rehydrate();
-        else if (colTag == "Flower") StartCoroutine(StunRacers());
-        else if (colTag == "EggBasket") 
+        
+        switch (col.gameObject.tag)
         {
-            int powerups =UnityEngine.Random.Range(0, 8);
-
+            case "SpeedBoost": 
+            StartCoroutine(ChangeSpeed(1.5f));
+            break;
+            case "Debuff": 
+            StartCoroutine(ChangeSpeed(0.5f));
+            break;
+            case "Upsize": 
+            StartCoroutine(ChangeSize(2f));
+            break;
+            case "Downsize": 
+            StartCoroutine(ChangeSize(0.5f));
+            break;
+            case "OilSpill": 
+            StartCoroutine(SpillOil());
+            break;
+            case "Invincibility": 
+            StartCoroutine(MakeInvincible());
+            break;
+            case "Boom": 
+            ExplodeNearestRacer();
+            break;
+            case "Rehydrate": 
+            Rehydrate();
+            break;
+            case "Flower": 
+            StartCoroutine(StunRacers());
+            break;
+            case "Bee": 
+            StartCoroutine(ChangeSpeed(2.5f));
+            break;
+            case "Candy":
+            health.hydration /= 4;
+            StartCoroutine(ChangeSpeed(5f));
+            break;
+            case "IceCube":
+            StartCoroutine(FreezePlayer());
+            break;
+            case "Present":
+            int presentType = UnityEngine.Random.Range(0, 2);
+            switch(presentType)
+            {
+                case 0:
+                hasSnowball = true;
+                Destroy(powerup);
+                break;
+                case 1:
+                Instantiate(inkParticles, transform.position, Quaternion.identity);
+                Destroy(powerup);
+                break;
+            }
+            break;
+            case "EggBasket":
+            int powerups = UnityEngine.Random.Range(0, 9);
             switch (powerups)
             {
                 case 0:
@@ -68,15 +121,7 @@ public class HandlePowerups : MonoBehaviour
                 StartCoroutine(StunRacers());
                 break;
             }
-        }
-        else if (colTag == "Bee")
-        {
-            StartCoroutine(ChangeSpeed(2.5f));
-        }
-        else if (colTag == "Candy")
-        {
-            health.hydration /= 4;
-            StartCoroutine(ChangeSpeed(5f));
+            break;
         }
     }
 
@@ -97,6 +142,41 @@ public class HandlePowerups : MonoBehaviour
 
         if (nearestRacer != null) Destroy(nearestRacer);
         Destroy(powerup);
+    }
+
+    void Rehydrate()
+    {
+        health.hydration += 15;
+
+        if (health.hydration > 50) health.hydration = 50;
+        Destroy(powerup);
+    }
+
+    void SpawnOilSpill()
+    {
+        int i = UnityEngine.Random.Range(0, 3);
+
+        Instantiate(oilSpillPrefabs[i], exhaustPoint.transform.position, Quaternion.identity);
+    }
+
+    void LaunchSnowball()
+    {
+        float minDistance = float.MaxValue;
+        GameObject nearestRacer = null;
+
+        foreach (GameObject racer in GameObject.FindGameObjectsWithTag("Racer"))
+        {
+            float distance = Vector2.Distance(transform.position, racer.transform.position);
+            if (minDistance > distance)
+            {
+                minDistance = distance;
+                nearestRacer = racer;
+            }
+        }
+        Vector2 targetDirection = ((Vector2)nearestRacer.transform.position - (Vector2)exhaustPoint.transform.position).normalized;
+        GameObject newSnowball = Instantiate(snowballPrefab, exhaustPoint.transform.position, Quaternion.identity);
+        Rigidbody2D snowballrb = newSnowball.GetComponent<Rigidbody2D>();
+        snowballrb.velocity = targetDirection * 20f;
     }
 
     IEnumerator StunRacers()
@@ -134,21 +214,6 @@ public class HandlePowerups : MonoBehaviour
         foreach (GameObject racer in nearestRacers) racer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 
-    void Rehydrate()
-    {
-        health.hydration += 15;
-
-        if (health.hydration > 50) health.hydration = 50;
-        Destroy(powerup);
-    }
-
-    void SpawnOilSpill()
-    {
-        int i = UnityEngine.Random.Range(0, 3);
-
-        Instantiate(oilSpillPrefabs[i], exhaustPoint.transform.position, Quaternion.identity);
-    }
-
     IEnumerator SpillOil()
     {
         Destroy(powerup);
@@ -179,5 +244,14 @@ public class HandlePowerups : MonoBehaviour
         health.damageable = false;
         yield return new WaitForSeconds(10f);
         health.damageable = true;
+    }
+
+    IEnumerator FreezePlayer()
+    {
+        movement.enabled = false;
+        rb2d.velocity = Vector2.zero;
+        yield return new WaitForSeconds(3f);
+        movement.enabled = true;
+        Destroy(powerup);
     }
 }

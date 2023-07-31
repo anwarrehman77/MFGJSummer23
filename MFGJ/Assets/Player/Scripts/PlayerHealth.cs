@@ -61,10 +61,7 @@ public class PlayerHealth : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Lava")
-        {
-           health -= 2;
-        }
+        if (col.gameObject.tag == "Lava") health -= 2;
     }
 
     public void TakeDamage(int damage)
