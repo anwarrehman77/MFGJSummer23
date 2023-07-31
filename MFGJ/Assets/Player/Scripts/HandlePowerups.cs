@@ -6,6 +6,8 @@ using System.Linq;
 
 public class HandlePowerups : MonoBehaviour
 {
+    public GameObject snowballPrefab;
+    private bool hasSnowball = false;
     public GameObject[] oilSpillPrefabs = new GameObject[4];
     public GameObject exhaustPoint;
     private Rigidbody2D rb2d;
@@ -25,7 +27,11 @@ public class HandlePowerups : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.T) && hasSnowball)
+        {
+            LaunchSnowball();
+            hasSnowball = !hasSnowball;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col) 
@@ -42,6 +48,19 @@ public class HandlePowerups : MonoBehaviour
         else if (colTag == "Boom") ExplodeNearestRacer();
         else if (colTag == "Rehydrate") Rehydrate();
         else if (colTag == "IceCube") StartCoroutine(FreezePlayer());
+        else if (colTag == "Present")
+        {
+            int type = UnityEngine.Random.Range(0, 1);
+            switch(type)
+            {
+                case 0:
+                hasSnowball = true;
+                break;
+                case 1:
+                Debug.Log("BLOOP");
+                break;
+            }
+        }
         else if (colTag == "Candy")
         {
             health.hydration /= 4;
@@ -126,5 +145,25 @@ public class HandlePowerups : MonoBehaviour
         yield return new WaitForSeconds(3f);
         movement.enabled = true;
         Destroy(powerup);
+    }
+    
+    void LaunchSnowball()
+    {
+        float minDistance = float.MaxValue;
+        GameObject nearestRacer = null;
+
+        foreach (GameObject racer in GameObject.FindGameObjectsWithTag("Racer"))
+        {
+            float distance = Vector2.Distance(transform.position, racer.transform.position);
+            if (minDistance > distance)
+            {
+                minDistance = distance;
+                nearestRacer = racer;
+            }
+        }
+        Vector2 targetDirection = ((Vector2)nearestRacer.transform.position - (Vector2)exhaustPoint.transform.position).normalized;
+        GameObject newSnowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
+        Rigidbody2D snowballrb = newSnowball.GetComponent<Rigidbody2D>();
+        snowballrb.velocity = targetDirection * 20f;
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class SnowballLauncher : MonoBehaviour
 {
     public GameObject snowballPrefab;
-    public GameObject[] racers;
-    public float launchSpeed = 5f;
+    private GameObject[] racers;
+    public float launchSpeed = 20f;
     private Transform targetRacer;
     private bool isLaunchingSnowball = false;
 
