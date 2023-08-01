@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 304297091884091603}
   - component: {fileID: 6899211769527437623}
   - component: {fileID: 9205040869960714659}
+  - component: {fileID: -4429587110095130702}
   - component: {fileID: 9012033530430351354}
   m_Layer: 0
   m_Name: GreenRacer
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8168585428510356316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -181,6 +182,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9351082, y: 0.34386337}
   m_EdgeRadius: 0
+--- !u!114 &-4429587110095130702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168585428510356316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df47311aae3f02146a89bb50710939df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticles: {fileID: 1048002993058909157, guid: 7545b1882d4f3ae489519abbbfca7487, type: 3}
+  bloodParticles: {fileID: 5994572732764349950, guid: 934fea0a32e3c534787f9da07858f88f, type: 3}
+  smokeParticles: {fileID: 3220697088128104007, guid: 0b72bd0da2b81d84abc3c6d0ddb22843, type: 3}
+  health: 200
 --- !u!114 &9012033530430351354
 MonoBehaviour:
   m_ObjectHideFlags: 0

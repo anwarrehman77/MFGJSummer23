@@ -127,6 +127,48 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49fb6fce515b0144b2f5b10e953c3b0
+      internalID: -2136957752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lava_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cf0de59d95f3e4180cf92bc34714b0
+      internalID: 409072181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lava_2
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 32
         height: 32
@@ -137,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7740b14b586a4c458ee4e5dca491aa5
-      internalID: -645474939
+      spriteID: c2111645667580d4994a1618c97d57ed
+      internalID: 534351251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava_1
+      name: Lava_3
       rect:
         serializedVersion: 2
         x: 32
@@ -158,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24c7145d3da635b40841dd3ecb0ad05c
-      internalID: -923413683
+      spriteID: 9b1683d3df395ab4e9a478413e2d61b2
+      internalID: -1131250035
       vertices: []
       indices: 
       edges: []
@@ -175,8 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Lava_0: -645474939
-      Lava_1: -923413683
+      Lava_0: -2136957752
+      Lava_1: 409072181
+      Lava_2: 534351251
+      Lava_3: -1131250035
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

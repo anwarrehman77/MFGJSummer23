@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4508862902327999381}
   - component: {fileID: 6102499237843476948}
   - component: {fileID: 2223518476404611986}
+  - component: {fileID: 1695436069883744145}
   - component: {fileID: 82125709781159322}
   m_Layer: 0
   m_Name: BrownRacer
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1745326784019172000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1952982, y: 1.402832, z: -0.07296686}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -181,6 +182,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9441421, y: 0.348325}
   m_EdgeRadius: 0
+--- !u!114 &1695436069883744145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745326784019172000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df47311aae3f02146a89bb50710939df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodParticles: {fileID: 5994572732764349950, guid: 934fea0a32e3c534787f9da07858f88f, type: 3}
+  smokeParticles: {fileID: 3220697088128104007, guid: 0b72bd0da2b81d84abc3c6d0ddb22843, type: 3}
+  health: 200
 --- !u!114 &82125709781159322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +210,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: {fileID: 0}
+  speedX: 0
+  speedY: 0
