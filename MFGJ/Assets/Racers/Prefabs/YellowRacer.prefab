@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7071154532288184662}
   - component: {fileID: -6809657494266141826}
   - component: {fileID: 3026073548509662353}
+  - component: {fileID: 5317628086581706947}
   m_Layer: 0
   m_Name: YellowRacer
   m_TagString: Racer
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df47311aae3f02146a89bb50710939df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionParticles: {fileID: 0}
   bloodParticles: {fileID: 5994572732764349950, guid: 934fea0a32e3c534787f9da07858f88f, type: 3}
   smokeParticles: {fileID: 3220697088128104007, guid: 0b72bd0da2b81d84abc3c6d0ddb22843, type: 3}
   health: 200
@@ -212,3 +214,15 @@ MonoBehaviour:
   waypoints: {fileID: 0}
   speedX: 0
   speedY: 0
+--- !u!114 &5317628086581706947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841530919048457142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63f904dd2681c54cb1ed062c64fc607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

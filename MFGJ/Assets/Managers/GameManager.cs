@@ -28,6 +28,13 @@ public class GameManager : MonoBehaviour
 
         timeLeftText.text = Math.Round(timeLimit, 2).ToString();
         scoreText.text = score.ToString();
+
+        if (timeLimit <= 0)
+        {
+            Debug.Log("OutOfTime");
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<PlayerHealth>().TakeDamage(int.MaxValue);
+        }
     }
 
     public void OnStageEnd()

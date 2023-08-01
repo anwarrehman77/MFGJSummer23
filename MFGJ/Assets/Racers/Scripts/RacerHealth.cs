@@ -15,15 +15,19 @@ public class RacerHealth : MonoBehaviour
         if (health <= 0) Die();
     }
 
-    void OnTriggerStay2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Lava") health--;
-        else if (col.gameObject.tag == "Meteor") 
+        if (col.gameObject.tag == "Meteor") 
         {
             health -= 25;
             Instantiate(explosionParticles, transform.position, Quaternion.identity);
             Destroy(col.gameObject);
         }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Lava") health--;
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -34,6 +38,12 @@ public class RacerHealth : MonoBehaviour
             Destroy(col.gameObject);
         }
     }
+
+    public void TakeDamage(int dmg)
+    {
+        health -= dmg;
+    }
+
     void Die()
     {
         Instantiate(bloodParticles, transform.position, Quaternion.identity);

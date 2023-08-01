@@ -26,12 +26,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Pathway")
+        switch (col.gameObject.tag)
         {
+            case "Pathway":
             speedBiasX *= 1.2f;
             speedX *= 1.2f;
+            break;
+            case "FinishLine":
+            gameManager.GetComponent<GameManager>().OnStageEnd();
+            break;
+            case "Oil":
+            break;
         }
-        else if (col.gameObject.tag == "FinishLine") gameManager.GetComponent<GameManager>().OnStageEnd();
     }
 
     private void OnTriggerExit2D(Collider2D col)

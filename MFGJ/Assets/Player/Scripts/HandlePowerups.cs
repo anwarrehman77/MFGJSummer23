@@ -140,7 +140,7 @@ public class HandlePowerups : MonoBehaviour
             }
         }
 
-        if (nearestRacer != null) Destroy(nearestRacer);
+        if (nearestRacer != null) nearestRacer.GetComponent<RacerHealth>().TakeDamage(int.MaxValue);
         Destroy(powerup);
     }
 
@@ -217,7 +217,7 @@ public class HandlePowerups : MonoBehaviour
     IEnumerator SpillOil()
     {
         Destroy(powerup);
-        InvokeRepeating("SpawnOilSpill", 0f, 0.2f);
+        InvokeRepeating("SpawnOilSpill", 0f, 0.05f);
         yield return new WaitForSeconds(5f);
         CancelInvoke();
     }

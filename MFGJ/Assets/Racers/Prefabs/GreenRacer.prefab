@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9205040869960714659}
   - component: {fileID: -4429587110095130702}
   - component: {fileID: 9012033530430351354}
+  - component: {fileID: 3423598410150782658}
   m_Layer: 0
   m_Name: GreenRacer
   m_TagString: Racer
@@ -213,3 +214,15 @@ MonoBehaviour:
   waypoints: {fileID: 0}
   speedX: 3
   speedY: 2
+--- !u!114 &3423598410150782658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168585428510356316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63f904dd2681c54cb1ed062c64fc607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
