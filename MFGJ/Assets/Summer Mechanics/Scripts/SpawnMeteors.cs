@@ -16,7 +16,7 @@ public class SpawnMeteors : MonoBehaviour
         if (Time.time >= nextSpawnTime)
         {
             Instantiate(meteor, transform.position, Quaternion.identity);
-            spawnCooldown = Random.Range(2f, 5f);
+            spawnCooldown = Random.Range(2f, 3.5f);
             nextSpawnTime = Time.time + spawnCooldown;
         }
     }

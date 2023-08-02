@@ -29,6 +29,12 @@ public class MoveByWaypoints : MonoBehaviour
         
         speedX = currentWaypoint.position.x >= transform.position.x ? 5f : 2f;
         direction = ((Vector2)currentWaypoint.transform.position - (Vector2)transform.position).normalized;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log(speedX);
+            Debug.Log(direction);
+        }
     }
     
     void FixedUpdate()

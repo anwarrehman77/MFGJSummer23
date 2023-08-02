@@ -126,7 +126,7 @@ TextureImporter:
       name: Railing_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -147,7 +147,7 @@ TextureImporter:
       name: Railing_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 16
         width: 16
         height: 16
@@ -168,7 +168,7 @@ TextureImporter:
       name: Railing_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 32
         y: 16
         width: 16
         height: 16
@@ -189,8 +189,8 @@ TextureImporter:
       name: Railing_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -210,8 +210,8 @@ TextureImporter:
       name: Railing_4
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -231,8 +231,8 @@ TextureImporter:
       name: Railing_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 80
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -252,7 +252,7 @@ TextureImporter:
       name: Railing_6
       rect:
         serializedVersion: 2
-        x: 48
+        x: 0
         y: 0
         width: 16
         height: 16
@@ -265,6 +265,111 @@ TextureImporter:
       bones: []
       spriteID: 1a1f37d80f9c3434fa5c8e75f6666f9e
       internalID: -1676537615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Railing_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4048b8077dd852e4bbbf3245458f839d
+      internalID: -517420072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Railing_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5bc9ad19ecfbe4facfdb4f79d12f6e
+      internalID: 915499763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Railing_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389ff29e25dbcf945a1355f823466c32
+      internalID: -2863114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Railing_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc62d8951b259f9498d37fdf17e8a5b8
+      internalID: 800574412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Railing_11
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce55c5000d449944b959cc7ed8d0ffc1
+      internalID: -265747338
       vertices: []
       indices: 
       edges: []
@@ -282,11 +387,16 @@ TextureImporter:
     nameFileIdTable:
       Railing_0: 1348660561
       Railing_1: -11484139
+      Railing_10: 800574412
+      Railing_11: -265747338
       Railing_2: 1360593664
       Railing_3: 1810340903
       Railing_4: -1025435494
       Railing_5: 2133334163
       Railing_6: -1676537615
+      Railing_7: -517420072
+      Railing_8: 915499763
+      Railing_9: -2863114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
