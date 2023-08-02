@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
             gameManager.GetComponent<GameManager>().OnStageEnd();
             break;
             case "Oil":
+            rb2d.velocity += new Vector2(0f, Random.Range(-10f, 10f));
             break;
         }
     }
