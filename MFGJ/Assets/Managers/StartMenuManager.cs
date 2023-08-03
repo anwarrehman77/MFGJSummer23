@@ -31,6 +31,5 @@ public class StartMenuManager : MonoBehaviour
             spring.SetActive(true);
             break;
         }
-        
     }
 }

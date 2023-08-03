@@ -51,4 +51,15 @@ public class UI : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
     }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
+    }
 }
