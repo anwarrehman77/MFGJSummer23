@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'en' Physical Memory: 16293 MB
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 20422 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ
+C:/Users/julmu/Programming/Game Jam/MFGJSummer23/MFGJ
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-64723
-Successfully changed project path to: C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ
-C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ
+52968
+Successfully changed project path to: C:/Users/julmu/Programming/Game Jam/MFGJSummer23/MFGJ
+C:/Users/julmu/Programming/Game Jam/MFGJSummer23/MFGJ
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,121 +49,144 @@ C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19020] Host "[IP] 192.168.33.2 [Port] 0 [Flags] 2 [Guid] 2457691083 [EditorId] 2457691083 [Version] 1048832 [Id] WindowsEditor(7,ANWAR-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10776] Host "[IP] 10.1.10.197 [Port] 0 [Flags] 2 [Guid] 1386203037 [EditorId] 1386203037 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N5HIDJV) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19020] Host "[IP] 192.168.33.2 [Port] 0 [Flags] 2 [Guid] 2457691083 [EditorId] 2457691083 [Version] 1048832 [Id] WindowsEditor(7,ANWAR-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10776] Host "[IP] 10.1.10.197 [Port] 0 [Flags] 2 [Guid] 1386203037 [EditorId] 1386203037 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N5HIDJV) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 18.77 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 976.77 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.4f1 (35713cd46cd7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/anwar/Documents/GitHub/MFGJSummer23/MFGJ/Assets
+[Subsystems] Discovering subsystems at path C:/Users/julmu/Programming/Game Jam/MFGJSummer23/MFGJ/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 590 Series (ID=0x67df)
-    Vendor:   ATI
-    VRAM:     8170 MB
-    Driver:   31.0.14057.5006
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   27.21.14.5751
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56120
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56836
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.013419 seconds.
-- Loaded All Assemblies, in  0.520 seconds
+Registered in 0.101573 seconds.
+- Loaded All Assemblies, in  4.890 seconds
 Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for AppleTV target not found
+[usbmuxd] Start listen thread
+Native extension for iOS target not found
+[usbmuxd] Listen thread started
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 5447 ms
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.348 seconds
-Domain Reload Profiling: 865ms
-	BeginReloadAssembly (158ms)
+- Finished resetting the current domain, in 10.202 seconds
+Domain Reload Profiling: 15092ms
+	BeginReloadAssembly (1674ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (56ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (92ms)
-	LoadAllAssembliesAndSetupDomain (193ms)
-		LoadAssemblies (153ms)
+		CreateAndSetChildDomain (6ms)
+	RebuildCommonClasses (611ms)
+	RebuildNativeTypeToScriptingClass (40ms)
+	initialDomainReloadingComplete (330ms)
+	LoadAllAssembliesAndSetupDomain (2230ms)
+		LoadAssemblies (1665ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (182ms)
-			TypeCache.Refresh (181ms)
-				TypeCache.ScanAssembly (165ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (348ms)
+		AnalyzeDomain (2188ms)
+			TypeCache.Refresh (2177ms)
+				TypeCache.ScanAssembly (2006ms)
+			ScanForSourceGeneratedMonoScriptInfo (9ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (10206ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (275ms)
+		SetupLoadedEditorAssemblies (9097ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (7546ms)
+			SetLoadedEditorAssemblies (63ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (186ms)
-			ProcessInitializeOnLoadMethodAttributes (65ms)
-			AfterProcessingInitializeOnLoad (0ms)
+			BeforeProcessingInitializeOnLoad (11ms)
+			ProcessInitializeOnLoadAttributes (899ms)
+			ProcessInitializeOnLoadMethodAttributes (576ms)
+			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\anwar\Documents\GitHub\MFGJSummer23\MFGJ\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\anwar\Documents\GitHub\MFGJSummer23\MFGJ\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.961 seconds
-Refreshing native plugins compatible for Editor in 7.14 ms, found 4 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Users\julmu\Programming\Game Jam\MFGJSummer23\MFGJ\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\julmu\Programming\Game Jam\MFGJSummer23\MFGJ\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in 14.832 seconds
+Refreshing native plugins compatible for Editor in 46.80 ms, found 4 plugins.
 Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.769 seconds
-Domain Reload Profiling: 1722ms
-	BeginReloadAssembly (156ms)
+- Finished resetting the current domain, in  5.209 seconds
+Domain Reload Profiling: 20025ms
+	BeginReloadAssembly (2159ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (131ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (22ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (672ms)
-		LoadAssemblies (376ms)
+		CreateAndSetChildDomain (281ms)
+	RebuildCommonClasses (211ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (101ms)
+	LoadAllAssembliesAndSetupDomain (12324ms)
+		LoadAssemblies (5453ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (366ms)
-			TypeCache.Refresh (329ms)
-				TypeCache.ScanAssembly (315ms)
-			ScanForSourceGeneratedMonoScriptInfo (27ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (769ms)
+		AnalyzeDomain (8081ms)
+			TypeCache.Refresh (7313ms)
+				TypeCache.ScanAssembly (7106ms)
+			ScanForSourceGeneratedMonoScriptInfo (671ms)
+			ResolveRequiredComponents (97ms)
+	FinalizeReload (5210ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (548ms)
+		SetupLoadedEditorAssemblies (2667ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (181ms)
+			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (101ms)
-			ProcessInitializeOnLoadAttributes (378ms)
-			ProcessInitializeOnLoadMethodAttributes (44ms)
-			AfterProcessingInitializeOnLoad (12ms)
+			BeforeProcessingInitializeOnLoad (161ms)
+			ProcessInitializeOnLoadAttributes (2125ms)
+			ProcessInitializeOnLoadMethodAttributes (163ms)
+			AfterProcessingInitializeOnLoad (27ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 7.56 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 9.56 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4349 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 94 unused Assets / (1.5 MB). Loaded Objects now: 4797.
-Memory consumption went from 161.9 MB to 160.3 MB.
-Total: 5.596000 ms (FindLiveObjects: 0.440700 ms CreateObjectMapping: 0.289900 ms MarkObjects: 4.284200 ms  DeleteObjects: 0.579600 ms)
+Unloading 4350 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.4 MB). Loaded Objects now: 4804.
+Memory consumption went from 167.7 MB to 166.3 MB.
+Total: 6.199600 ms (FindLiveObjects: 0.446400 ms CreateObjectMapping: 0.272600 ms MarkObjects: 5.012800 ms  DeleteObjects: 0.465900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -179,49 +202,33 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 64930.984146 seconds.
+  Time since last request: 1384190.945714 seconds.
+  path: Assets/Winter Mechanics/WinterBush1.png
+  artifactKey: Guid(21e5eabaaaad7e24ba0444fe69b87113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Winter Mechanics/WinterBush1.png using Guid(21e5eabaaaad7e24ba0444fe69b87113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c02bcec03ca0048427a84fb62fbe5760') in 0.119947 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Winter Mechanics/WinterBush2.png
+  artifactKey: Guid(d168c5c89826f1d4d9b345c787792478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Winter Mechanics/WinterBush2.png using Guid(d168c5c89826f1d4d9b345c787792478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db5228e3c388cb9c59a7e6998aefbc3') in 0.020895 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
   path: Assets/Winter Mechanics/WinterTrees3.png
   artifactKey: Guid(657c60bf55521fd48b83cc5929064a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Winter Mechanics/WinterTrees3.png using Guid(657c60bf55521fd48b83cc5929064a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eed883e488bdc77b18f207fd1abfa2d') in 0.130974 seconds
+Start importing Assets/Winter Mechanics/WinterTrees3.png using Guid(657c60bf55521fd48b83cc5929064a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '323bbfce4040e3752f9b93fb8ae6f7c3') in 0.078161 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 16
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000044 seconds.
+  Time since last request: 0.000337 seconds.
   path: Assets/Winter Mechanics/WinterTrees4.png
   artifactKey: Guid(cf551d65687b8f94794e2d2882cfe926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Winter Mechanics/WinterTrees4.png using Guid(cf551d65687b8f94794e2d2882cfe926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '676986d6ccdcff2f77eda558b8187e5b') in 0.019412 seconds
+Start importing Assets/Winter Mechanics/WinterTrees4.png using Guid(cf551d65687b8f94794e2d2882cfe926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54ba2c5f34b13b2193b596ae5d7a40e8') in 0.065226 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 6.975002 seconds.
-  path: Assets/Winter Mechanics/WinterBush2.png
-  artifactKey: Guid(d168c5c89826f1d4d9b345c787792478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Winter Mechanics/WinterBush2.png using Guid(d168c5c89826f1d4d9b345c787792478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f2fb7c678e1811596cbed57554db023') in 0.016450 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 50.609305 seconds.
-  path: Assets/Winter Mechanics/WinterBush2.png
-  artifactKey: Guid(d168c5c89826f1d4d9b345c787792478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Winter Mechanics/WinterBush2.png using Guid(d168c5c89826f1d4d9b345c787792478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd88b0249036725e8cc954587160b323') in 0.015754 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 107.975488 seconds.
-  path: Assets/Winter Mechanics/WinterTrees2.png
-  artifactKey: Guid(447c1bb3c3a346641b6bd1652a3203af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Winter Mechanics/WinterTrees2.png using Guid(447c1bb3c3a346641b6bd1652a3203af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8c1880995b3212438c377afd82dec8d') in 0.013777 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Winter Mechanics/WinterTrees4.png
-  artifactKey: Guid(cf551d65687b8f94794e2d2882cfe926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Winter Mechanics/WinterTrees4.png using Guid(cf551d65687b8f94794e2d2882cfe926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66300882ce30b7ed680558d03db03515') in 0.013760 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 16
