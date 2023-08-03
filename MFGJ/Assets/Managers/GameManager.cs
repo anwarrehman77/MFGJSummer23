@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     public int score;
 
     [SerializeField]
-    private TMP_Text scoreText, timeLeftText;
+    private GameObject HUD, winScreen;
+    [SerializeField]
+    private TMP_Text scoreText, timeLeftText, winScoreText;
     [SerializeField]
     private float timeLimit;
     [SerializeField]
@@ -42,6 +44,12 @@ public class GameManager : MonoBehaviour
         score += Mathf.RoundToInt(timeLimit);
         PlayerPrefs.SetInt($"LastScore{level}", score);
         if (score > PlayerPrefs.GetInt($"HighScore{level}")) PlayerPrefs.SetInt($"HighScore{level}", score);
+        HUD.SetActive(false);
+        winScreen.SetActive(true);
+        winScoreText.text = $"Score: {score}";
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerHealth>().enabled = false;
+        player.GetComponent<PlayerMovement>().enabled = false;
     }
 
     public IEnumerator SetScoreText(int scoreUp, float duration)

@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/WinterStuff.unity
-    guid: 41f522ab0779eec4da08c8b4b2a4e290
+    path: Assets/Scenes/StartMenu.unity
+    guid: 100c0a92cdf764a48b7c0502a8dee6ab
+  - enabled: 1
+    path: Assets/Scenes/Summer.unity
+    guid: 0292b8d47a3fcad4083f7e4f747d4ece
+  - enabled: 1
+    path: Assets/Scenes/HighScoreScreen.unity
+    guid: 417700648fb0b0f4495e1840ecaac76a
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: bfc2232bfff58d447af7c3548be20a1f
   m_configObjects: {}

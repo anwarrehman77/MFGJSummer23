@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
-    GameObject explosionParticles, bloodParticles, smokeParticles;
+    GameObject explosionParticles, bloodParticles, smokeParticles, deathScreen;
     [SerializeField]
     private int dehydrationRate = 1;
 
@@ -73,6 +73,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Instantiate(smokeParticles, transform.position, Quaternion.identity);
         Instantiate(bloodParticles, transform.position, Quaternion.identity);
+        deathScreen.SetActive(true);
         Destroy(gameObject);
     }
 }
