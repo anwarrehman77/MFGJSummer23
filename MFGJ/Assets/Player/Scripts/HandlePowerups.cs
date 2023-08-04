@@ -90,7 +90,7 @@ public class HandlePowerups : MonoBehaviour
             }
             break;
             case "EggBasket":
-            int powerups = UnityEngine.Random.Range(0, 9);
+            int powerups = UnityEngine.Random.Range(0, 10);
             switch (powerups)
             {
                 case 0:
@@ -119,6 +119,9 @@ public class HandlePowerups : MonoBehaviour
                 break;
                 case 8:
                 StartCoroutine(StunRacers());
+                break;
+                case 9:
+                health.Die();
                 break;
             }
             break;

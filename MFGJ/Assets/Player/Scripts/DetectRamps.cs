@@ -30,11 +30,6 @@ public class DetectRamps : MonoBehaviour
         playerHealth = GetComponent<PlayerHealth>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return)) gameManagerObject.GetComponent<GameManager>().OnStageEnd();
-    }
-
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Ramps")

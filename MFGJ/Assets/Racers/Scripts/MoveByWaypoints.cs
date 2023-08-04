@@ -29,16 +29,15 @@ public class MoveByWaypoints : MonoBehaviour
         
         speedX = currentWaypoint.position.x >= transform.position.x ? 5f : 2f;
         direction = ((Vector2)currentWaypoint.transform.position - (Vector2)transform.position).normalized;
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log(speedX);
-            Debug.Log(direction);
-        }
     }
     
     void FixedUpdate()
     {
         rb2d.velocity = Vector2.Scale(direction, new Vector2(speedX, speedY));
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Oil") rb2d.velocity += new Vector2(0f, UnityEngine.Random.Range(-3f, 3f));
     }
 }

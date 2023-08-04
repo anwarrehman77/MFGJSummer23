@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 100c0a92cdf764a48b7c0502a8dee6ab
   - enabled: 1
+    path: Assets/Scenes/Spring.unity
+    guid: 07a4caf7af164634ab6be3e2537b2518
+  - enabled: 1
     path: Assets/Scenes/Summer.unity
     guid: 0292b8d47a3fcad4083f7e4f747d4ece
   - enabled: 1
