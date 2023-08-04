@@ -7,9 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
-        string level = PlayerPrefs.GetString("LastAccessedLevel") != "" ? PlayerPrefs.GetString("LastAccessedLevel") : "Spring";
-
-        SceneManager.LoadScene(level, LoadSceneMode.Single);
+        SceneManager.LoadScene("Spring", LoadSceneMode.Single);
     }
 
     public void LoadScores()
