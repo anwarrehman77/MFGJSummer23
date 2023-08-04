@@ -14,6 +14,7 @@ public class HandlePowerups : MonoBehaviour
     private PlayerMovement movement;
     private PlayerHealth health;
     private Rigidbody2D rb2d;
+    private DetectRamps playerDetectRamps;
     private bool hasSnowball = false;
 
     void Start()
@@ -21,6 +22,7 @@ public class HandlePowerups : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
         health = GetComponent<PlayerHealth>();
         rb2d = GetComponent<Rigidbody2D>();
+        playerDetectRamps = GetComponent<DetectRamps>();
     }
 
     void Update()
@@ -74,6 +76,10 @@ public class HandlePowerups : MonoBehaviour
             break;
             case "IceCube":
             StartCoroutine(FreezePlayer());
+            break;
+            case "Correct":
+            Debug.Log("Balls");
+            StartCoroutine(ChangeTrickScore(2));
             break;
             case "Present":
             int presentType = UnityEngine.Random.Range(0, 2);
@@ -253,5 +259,12 @@ public class HandlePowerups : MonoBehaviour
         yield return new WaitForSeconds(3f);
         movement.enabled = true;
         Destroy(powerup);
+    }
+
+    IEnumerator ChangeTrickScore(int multiplier)
+    {
+        playerDetectRamps.scoreMultiplier *= multiplier;
+        yield return new WaitForSeconds(5f);
+        playerDetectRamps.scoreMultiplier /= multiplier;
     }
 }

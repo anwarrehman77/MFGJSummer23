@@ -9,7 +9,7 @@ public class Sign : MonoBehaviour
 {
     private TMP_Text signText;
     private string[] problems;
-    private int index;
+    public int index;
     private string filePath;
 
     void Start()
