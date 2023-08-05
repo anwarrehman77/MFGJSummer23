@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (col.gameObject.tag == "Icicle")
         {
-            TakeDamage(10);
+            TakeDamage(50);
             Destroy(col.gameObject);
         }
     }
