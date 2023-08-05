@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1730631613565447365}
   - component: {fileID: 276688424310905676}
   - component: {fileID: 2835055085966502792}
+  - component: {fileID: 2545818163163452258}
+  - component: {fileID: 5844424725603927320}
   m_Layer: 0
   m_Name: FakeAnswer
   m_TagString: Untagged
@@ -58,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -2089915640242835725, guid: 132841671c9e88c4892653cc69a46c27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,7 +105,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 132841671c9e88c4892653cc69a46c27, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2089915640242835725, guid: 132841671c9e88c4892653cc69a46c27, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -169,6 +171,30 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_renderer: {fileID: 276688424310905676}
   m_maskType: 0
+--- !u!114 &2545818163163452258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331874809850384030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a819cac3ad2ca49977593e8a4fcdc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!210 &5844424725603927320
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331874809850384030}
+  m_Enabled: 1
+  m_SortingLayerID: 959005187
+  m_SortingLayer: 6
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
