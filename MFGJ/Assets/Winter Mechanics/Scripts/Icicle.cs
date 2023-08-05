@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Icicle : MonoBehaviour
 {
-    private float lifetime = 10f;
+    private float lifetime = 3f;
     private float timeSinceInstantiated;
 
     void Update()
