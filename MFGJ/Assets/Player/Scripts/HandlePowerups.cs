@@ -71,7 +71,7 @@ public class HandlePowerups : MonoBehaviour
             StartCoroutine(ChangeSpeed(2.5f));
             break;
             case "Candy":
-            health.hydration /= 4;
+            health.hydration /= 3;
             StartCoroutine(ChangeSpeed(5f));
             break;
             case "IceCube":

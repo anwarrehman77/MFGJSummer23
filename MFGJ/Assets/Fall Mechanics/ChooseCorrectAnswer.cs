@@ -5,7 +5,7 @@ using System;
 using System.IO;
 using TMPro;
 
-public class ChooseCorrectAnswer : MonoBehaviour
+public class ChooseCorrectAnswer : MonoBehaviour 
 {
     [SerializeField]
     private GameObject signObj;
