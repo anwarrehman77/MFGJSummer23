@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Fall.unity
     guid: 19d25ef668e36b04395447a455ec8cb3
   - enabled: 1
+    path: Assets/Scenes/Winter.unity
+    guid: eccdc2708f59eca48b647a89576adb5d
+  - enabled: 1
     path: Assets/Scenes/HighScoreScreen.unity
     guid: 417700648fb0b0f4495e1840ecaac76a
   - enabled: 1
