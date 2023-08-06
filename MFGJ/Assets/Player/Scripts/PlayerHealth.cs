@@ -33,6 +33,8 @@ public class PlayerHealth : MonoBehaviour
         healthBar.value = health;
 
         if (health <= 0 || hydration <= 0) Die();
+
+        if (Input.GetKeyDown(KeyCode.R)) Die();
     }
 
     void OnCollisionEnter2D(Collision2D col)
